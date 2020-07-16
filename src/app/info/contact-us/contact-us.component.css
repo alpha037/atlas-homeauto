@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card-container {
+  margin-bottom: 30px;
+}
+
+.card-container {
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+.card-container a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.card-container .heading-card {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  margin-right: -3px;
+  margin-bottom: 5rem;
+  margin-top: 30px;
+  text-align: center;
+  color: #333;
+  position: relative;
+}
+
+.heading-card::before {
+  content: "";
+  width: 10rem;
+  height: 0.8rem;
+  background-color: #45e19f;
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2rem;
+}
+
+.card-wrapper {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.card-container .card-wrapper .card {
+  width: 28rem;
+  background-color: #ebeef8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  box-shadow: 0.5rem 0.5rem 3rem rgba(0, 0, 0, 0.2);
+}
+
+.card-container .card-wrapper .card .card-img {
+  width: 100%;
+  height: 18rem;
+  object-fit: cover;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 78%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 78%, 0% 100%);
+}
+
+.card-container .card-wrapper .card .profile-img {
+  width: 15rem;
+  height: 15rem;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: -11rem;
+  z-index: 999;
+  border: 1px solid #eebef8;
+}
+
+.card-container .card-wrapper .card h1 {
+  font-size: 2.5rem;
+  color: #333333;
+  margin: 1.5rem 0;
+}
+
+.card-container .card-wrapper .card .job-title {
+  color: #777777;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.card-container .card-wrapper .card .social-media {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem 0;
+  margin-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card-container .card-wrapper .card .social-media i {
+  font-size: 3rem;
+  transition: color 0.5s ease;
+}
+
+.card-container .card-wrapper .card .social-media .fa-facebook-square {
+  color: #3b5999;
+}
+
+.card-container .card-wrapper .card .social-media .fa-twitter-square {
+  color: #55acee;
+}
+
+.card-container .card-wrapper .card .social-media .fa-github {
+  color: #333;
+}
+
+.card-container .card-wrapper .card .social-media .fa-instagram {
+  color: #e6683c;
+}
+
+.card-container .card-wrapper .card .social-media .fa-google-plus-square {
+  color: #dd4b39;
+}
+
+.card-container .card-wrapper .card .social-media .fa-facebook-square:hover,
+.card-container .card-wrapper .card .social-media .fa-twitter-square:hover,
+.card-container .card-wrapper .card .social-media .fa-instagram:hover,
+.card-container .card-wrapper .card .social-media .fa-google-plus-square:hover {
+  color: #333;
+}
+
+.card-container .card-wrapper .card .social-media .fa-github:hover {
+  color: #211f1f;
+}
+
+@media screen and (max-width: 768px) {
+  .card-container .heading-card {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .card-container .card-wrapper .card {
+    width: 20rem;
+  }
+
+  .card-container .card-wrapper .card h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .card-container .card-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-container .card-wrapper .card {
+    margin: 2rem;
+  }
+
+  .card-container .card-wrapper .card .about {
+    word-wrap: break-word;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  .card {
+    transition: all 0.3s ease;
+  }
+
+  .card:nth-child(1) {
+    animation: fadeIn 0.3s 0.3s backwards;
+  }
+
+  .card:nth-child(2) {
+    animation: fadeIn 0.3s 0.5s backwards;
+  }
+
+  .card:nth-child(3) {
+    animation: fadeIn 0.3s 0.7s backwards;
+  }
+
+  .card:nth-child(4) {
+    animation: fadeIn 0.3s 0.9s backwards;
+  }
+
+  .card:nth-child(5) {
+    animation: fadeIn 0.3s 1.2s backwards;
+  }
+
+  .card:hover {
+    /* transform: scale(0.98); */
+    transform: translateY(-10px);
+  }
+}

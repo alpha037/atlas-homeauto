@@ -1,0 +1,79 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    [autoFocus]="false"
+    #drawer
+    mode="over"
+    class="sidenav mat-elevation-z8"
+    fixedInViewport="true"
+    role="main"
+  >
+    <mat-toolbar>Menu</mat-toolbar>
+
+    <span class="user" *ngIf="appUser">
+      {{ "Hello, " + appUser.name.split(" ")[0] }}</span
+    >
+
+    <hr class="hr" />
+
+    <mat-nav-list>
+      <span *ngIf="appUser" class="group-item">Control Panel</span>
+      <a
+        *ngIf="appUser"
+        mat-list-item
+        (click)="drawer.toggle()"
+        routerLink="/master"
+      >
+        Master Bedroom
+      </a>
+      <a
+        *ngIf="appUser"
+        mat-list-item
+        (click)="drawer.toggle()"
+        routerLink="/guest"
+      >
+        Guest Room
+      </a>
+
+      <hr *ngIf="appUser" class="hr" />
+
+      <span class="group-item">Help</span>
+      <a mat-list-item (click)="drawer.toggle()" routerLink="/about"
+        >About Us</a
+      >
+      <a mat-list-item (click)="drawer.toggle()" routerLink="/contact"
+        >Contact Us</a
+      >
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="mat-elevation-z8">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+      >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <button onclick="this.blur()" mat-button routerLink="/">
+        Atlas Homeauto
+      </button>
+
+      <span class="fill-remaining-space"></span>
+
+      <button
+        *ngIf="appUser"
+        mat-button
+        onclick="this.blur()"
+        (click)="logout()"
+      >
+        Logout
+      </button>
+    </mat-toolbar>
+
+    <!-- Add Content Here -->
+    <ng-content></ng-content>
+
+    <app-footer></app-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>

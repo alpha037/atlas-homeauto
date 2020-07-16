@@ -1,0 +1,20 @@
+<ng-container *ngIf="!hasErrors; else error">
+  <div class="row" *ngIf="isLoading; else loaded">
+    <div class="col-5"></div>
+    <div class="col-2 loader">
+      <app-loader></app-loader>
+    </div>
+    <div class="col-5"></div>
+  </div>
+
+  <ng-template #loaded>
+    <control-panel
+      [appliance]="appliance"
+      [room-number]="'room2'"
+    ></control-panel>
+  </ng-template>
+</ng-container>
+
+<ng-template #error>
+  <app-not-found></app-not-found>
+</ng-template>

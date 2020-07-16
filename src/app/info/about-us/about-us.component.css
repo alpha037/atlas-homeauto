@@ -1,0 +1,30 @@
+.jumbotron {
+  background: none;
+}
+
+.jumbotron h1 {
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.box {
+  padding: 3rem;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.box:hover {
+  transform: scale(0.99);
+}
+
+.box .about {
+  font-size: 20px;
+}
+
+.box .about span {
+  font-weight: bold;
+}
+
+.box .description {
+  font-size: 20px;
+}

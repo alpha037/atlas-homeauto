@@ -1,0 +1,33 @@
+<h1 class="heading">{{ appliance.room }}</h1>
+
+<div class="row">
+  <div class="col-md-10 col-sm-12 mx-auto">
+    <div class="box mat-elevation-z12">
+      <div class="light">
+        <h1>Light Switch</h1>
+        <button
+          (click)="toggleLightState()"
+          [class.onState]="appliance.lightState"
+          class="lightButton mat-elevation-z8"
+        >
+          <span>
+            {{ appliance.lightSwitch }}
+          </span>
+        </button>
+      </div>
+
+      <div class="fan">
+        <h1>Fan Switch</h1>
+        <button
+          (click)="toggleFanState()"
+          [class.onState]="appliance.fanState"
+          class="fanButton mat-elevation-z8"
+        >
+          <span>
+            {{ appliance.fanSwitch }}
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

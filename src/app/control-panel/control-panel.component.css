@@ -1,0 +1,100 @@
+* {
+  user-select: none;
+}
+
+.box {
+  min-height: 200px;
+  margin: 60px auto 20px;
+  border: 1px solid #dddbdb;
+  border-radius: 20px;
+  background: #303a52;
+  padding-bottom: 10px;
+}
+
+.heading {
+  font-size: 40px;
+  font-weight: bolder;
+  color: #226089;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.box .light,
+.box .fan {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem;
+  margin-bottom: -2rem;
+  flex-direction: row;
+}
+
+.box .light h1,
+.box .fan h1 {
+  color: #43dde6;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.box .light button span,
+.box .fan button span {
+  font-weight: bold;
+}
+
+.lightButton,
+.fanButton {
+  position: relative;
+  width: 15rem;
+  height: 60px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: #000;
+  background-color: #e0ffff;
+  border: none;
+  border-radius: 45px;
+  /* box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); */
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  bottom: 10px;
+  margin-top: -1px;
+}
+
+/* .lightButton:hover,
+.fanButton:hover {
+  background-color: #000033;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+} */
+
+.onState {
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  background-color: #a6acec;
+}
+
+@media screen and (max-width: 768px) {
+  .box .light,
+  .box .fan {
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    padding: 3rem 2px;
+  }
+
+  .box {
+    padding-bottom: 0;
+  }
+
+  .box .light button,
+  .box .fan button {
+    margin: 1rem auto 0.5rem;
+  }
+
+  .heading {
+    font-size: 30px;
+    text-align: center;
+    margin: -5px auto;
+  }
+}
