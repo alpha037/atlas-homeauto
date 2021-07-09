@@ -1,3 +1,7 @@
+<a href="https://atlas.shubhranil.com" target="\_blank">
+<img src="https://img.shields.io/badge/Developed%20and%20Maintained%20by-Atlas%20Inc-blue">
+</a>
+
 # AtlasHomeauto
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
